@@ -2,10 +2,11 @@
 using namespace std;
 int main()
 {
-	int arr1[128]={0};
+	//int arr1[128]={0};
 	string str;
 	while(cin>>str)
 	{
+		int arr1[128]={0};
 		//count the number of char
 		for(int i=0;i<str.size();i++)
 		{
