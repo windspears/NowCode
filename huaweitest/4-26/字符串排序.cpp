@@ -1,12 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
-void Cmp(char a,char b)
-{
-	 
-}
-
 int main()
 {
+//解题思路：
+//1.求当前字符与a或A的差值，按照差值的大小排序存储
+//2.将原字符串的字符用新的字符串序列替代，非字符的不用改变
+//1.自己原本的思路是，将字符拆分成，小写字母、大写字母、非字母字符三个部分，然后组合输出。
 	string str;
 	vector<char> orderstr;
 	while(getline(cin,str))
