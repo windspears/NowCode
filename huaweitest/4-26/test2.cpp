@@ -16,7 +16,9 @@ bool cmp(string str1,string str2)
 		if(a1[j] != a2[j])return 0;
 	}
 	if(j==i) return 1;*/
+	
 	if(str1 == str2) return false;
+	if(str1.length() != str2.length()) return false;
 	sort(str1.begin(),str1.end());
 	sort(str2.begin(),str2.end());
 	return str1==str2;
@@ -25,31 +27,34 @@ bool cmp(string str1,string str2)
 int main()
 {
 	int n;
-	string str;
-	vector<string> vs;
 	while(cin>>n)
 	{
-		for(int i=0;i<n;i++)
+		string str;
+		string word,s2;
+		int index,count=0;
+		vector<string> vs;
+		for(int i=0;i<n;++i)
 		{	
 			cin>>str;
 			vs.push_back(str);
 		}
-		string s1,s2="";
-		int num,count=0;
-		cin>>s1>>num;
-		for(int i=0;i<n;i++)
+		sort(vs.begin(),vs.end());
+
+		cin>>word;
+		cin>>index;
+		for(int i=0;i<n;++i)
 		{
-			if(vs[i] != s1)
+			if(cmp(vs[i],word))
 			{
-				if(cmp(vs[i],s1))
-				{
-					count++;
-					if(count == num)
-						s2 = vs[i];
-				}
+				count++;
+				if(count == index)
+					s2 = vs[i];
 			}
 		}
-		cout<<count<<" "<<s2<<endl;
+		if(!vs.empty())
+			cout<<count<<endl;
+		if(count >= index)
+			cout<<s2<<endl;
 	}
 	return 0;
 }
