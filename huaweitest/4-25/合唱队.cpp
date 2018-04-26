@@ -8,8 +8,11 @@ void calIncSub(vector<int> queue,vector<int> &Num)
 				Num[i]=Num[j]+1;
 }
 int main()
-{
-	
+{//1.先求数组从左到右每个成员的最大递增l[a[i]]；
+ //2.再求从右到左数组成员的最大递增r[a[i]]；
+ //3.每个成员的递增之和-1，即是队列总长度；
+ //4：n-总长度，即为取出人数
+		
 	int n,num;
 	while(cin>>n)
 	{
