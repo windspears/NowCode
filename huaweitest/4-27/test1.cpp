@@ -1,9 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void encrypt(string &s1)
+void encrypt(string s1)
 {
-	for(int i=0;i<s1.size();i++)
+//TJm5Jpgv9gokaSPV4xa77ZeT7W08RI7G7DIp77k9Hx8zM9VfrK47qL05VaC6uf8P1p0EMu259D1Oj0P4lFi36MM
+//ylV2Zv83sVqf1LF0P6soqMYF1aAv0i61iy0oScauz4Wv6HGo30C9v1xFus8e9JZ0VG6JF1680h2Zk3OV26ZYjg5YQHT09ig
+
+    int len = s1.size();
+	for(int i=0;i<len;i++)
 	{
 		if(s1[i]>='A'&&s1[i]<='Z')
 		{	
@@ -24,9 +28,10 @@ void encrypt(string &s1)
 	cout<<s1<<endl;
 }
 
-void unencrypt(string &s2)
+void unencrypt(string s2)
 {
-	for(int i=0;i<s2.size();i++)
+    int len = s2.size();
+	for(int i=0;i<len;i++)
 	{
 		if(s2[i]>='A'&&s2[i]<='Z')
 		{	
@@ -36,7 +41,7 @@ void unencrypt(string &s2)
 		else if(s2[i]>='a'&&s2[i]<='z')
 		{	
 			if(s2[i] == 'a') s2[i] = 'Z';
-			else s2[i] -= 31;
+			else s2[i] -= 33;
 		}
 		else if(s2[i]>='0'&&s2[i]<='9')
 		{	
@@ -50,9 +55,13 @@ void unencrypt(string &s2)
 
 int main()
 {
-	string str1,str2;
-	cin>>str1>>str2;
-	encrypt(str1);
-	unencrypt(str2);
+	string str1;
+    string str2;
+	while(getline(cin,str1))
+    {
+        getline(cin,str2);
+	    encrypt(str1);
+	    unencrypt(str2);
+    }
 	return 0;
 }
