@@ -21,7 +21,7 @@ void encrypt(string s1)
 		}
 		else if(s1[i]>='0'&&s1[i]<='9')
 		{	
-			if(s1[i] == '9') s1[i] = '1';
+			if(s1[i] == '9') s1[i] = '0';
 			else s1[i] += 1;
 		}
 	}
@@ -45,7 +45,7 @@ void unencrypt(string s2)
 		}
 		else if(s2[i]>='0'&&s2[i]<='9')
 		{	
-			if(s2[i] == '1') s2[i] = '9';
+			if(s2[i] == '0') s2[i] = '9';
 			else s2[i] -= 1;
 		}
 	}
