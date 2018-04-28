@@ -1,10 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
-const string hp1 = "0123456789abcdefABCEDF";
+const string hp1 = "0123456789abcdefABCDEF";
 const string hp2 = "084C2A6E195D3B7F5D3B7F";
 
 int main()
 {
+//思路：
+//1.输入字符串合并，分开排序。
+//2.根据对应的字符输出转换后的字符。
 	string str1,str2;
 	while(cin>>str1)
 	{
@@ -21,7 +24,6 @@ int main()
 		}
 		sort(s1.begin(),s1.end());
 		sort(s2.begin(),s2.end());
-		//int len = str1.size();
 		s.clear();
 		for(int i=0,j=0,k=0;i<len;i++)
 		{
