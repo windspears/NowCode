@@ -3,6 +3,7 @@ using namespace std;
 
 int main()
 {
+//题目很简单主要是利用循环控制输出，利用信号量控制输出的增量即可
 	int N;
 	while(cin>>N)
 	{
