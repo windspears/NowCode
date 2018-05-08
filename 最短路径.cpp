@@ -2,6 +2,10 @@
 using namespace std;
 #define inf 10000
 
+//思路
+//1.寻找到达当前位置i的最短路径
+//2.分解子问题，寻找从j到i的最短路径
+//3.计算j和i的距离，比较能否到达i，若能则比较步数大小若小则记录，否则舍弃！
 int Minpath(int n,int* a,int* b,int* path)
 {
 	
