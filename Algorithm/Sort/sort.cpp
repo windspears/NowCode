@@ -128,4 +128,26 @@ function MergeSort(arr)
 	for(int )
 }
 
+//6.Quick Sort
 
+function QucikSort(arr,int l,int r)
+{
+	if(l<r)
+	{
+		int x=arr[0];
+		int i=l.j=r;
+		while(i<j&&arr[j]>x)
+			j--;
+		if(i<j)
+			arr[i++] = arr[j];
+		while(i<j&&arr[i]<x)
+			i++;
+		if(i<j)
+			arr[j--] = arr[i];
+		arr[i] = x;
+		QuickSort(arr,l,i-1);
+		QuickSort(arr,i+1,r);
+		
+	}
+	
+}
