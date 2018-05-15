@@ -129,3 +129,7 @@ function MergeSort(arr)
 }
 
 
+//6.quicksort
+
+
+
